@@ -1,0 +1,26 @@
+{
+  "name": "Fresquisimo-API-REST",
+  "version": "1.0.0",
+  "description": "*Node.js API-REST project with CRUD operations* ## Requirements - The application will be applied entirely in Javascript, both in the backend and in the frontend, being able to also use HTML, CSS and related frameworks that are considered appropriate. - The application will allow the 4 CRUD operations on the database. - The database must be MongoDB and have at least 2 schemas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deg42/Fresquisimo-API-REST.git"
+  },
+  "keywords": [],
+  "author": "deg42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deg42/Fresquisimo-API-REST/issues"
+  },
+  "homepage": "https://github.com/Deg42/Fresquisimo-API-REST#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
