@@ -17,6 +17,16 @@
 - Upload the repository to GitHub
 - Deploy the application on Heroku
 
+## How to
+You will need a .env file with the following Environment Variables:
+
+```
+PORT = port number
+DB_URI = mongodb+srv://user:password@server/database?retryWrites=true&w=majority
+```
+> Replace `port number`, `user`, `password`, `server` and `database` with your own values.\
+> Default Port if not specified: 3000
+
 ## Acknowledgment
 Full Stack Teacher: 
 [José Antonio Muñoz Jiménez](https://github.com/jamj2000) 
