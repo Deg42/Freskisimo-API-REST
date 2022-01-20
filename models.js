@@ -18,7 +18,11 @@ const Congelado = mongoose.model(
 const Vehiculo = mongoose.model(
   'Vehiculo',
   new mongoose.Schema(
-    { matricula: { type: String, unique: true }, marca: String, modelo: String, anyo: Date},
+    { 
+    matricula: { type: String, unique: true }, 
+    marca: String, 
+    modelo: String, 
+    fechaMatriculacion: { type: Date, default: Date.now }},
     {
       versionKey: false,  // Ignore version key
     }
@@ -26,10 +30,10 @@ const Vehiculo = mongoose.model(
 )
 
 // ~ REPARTIDORES ~
-const Repartido = mongoose.model(
+const Repartidor = mongoose.model(
   'Repartidor',
   new mongoose.Schema(
-    { dni : { type: String, unique: true }, nombre: String, apellido: String, repartiendo: Boolean, vehiculo: Vehiculo},
+    { dni : { type: String, unique: true }, nombre: String, apellido: String, repartiendo: Boolean, vehiculo: { type: mongoose.Schema.Types.ObjectId, ref: 'Vehiculo' }},
     {
       versionKey: false,  // Ignore version key
     }
@@ -38,10 +42,12 @@ const Repartido = mongoose.model(
 
 // EXPORTS
 module.exports = {
-  Congelado: Congelado
+  Congelado: Congelado,
+  Vehiculo: Vehiculo
 }
 
 // Shorter way to export:
 // module.exports = {
 //     Congelado
+//     Vehiculo
 // }

@@ -27,6 +27,11 @@ DB_URI = mongodb+srv://user:password@server/database?retryWrites=true&w=majority
 > Replace `port number`, `user`, `password`, `server` and `database` with your own values.\
 > Default Port if not specified: 3000
 
+## Test
+The tests are in [Freskisimo.postman_collection file](https://github.com/Deg42/Fresquisimo-API-REST/blob/main/test/Freskisimo.postman_collection.json)
+
+Simply export the json to the [POSTMAN app](https://www.postman.com/downloads/)
+
 ## Acknowledgment
 Full Stack Teacher: 
 [José Antonio Muñoz Jiménez](https://github.com/jamj2000) 

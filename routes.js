@@ -16,5 +16,12 @@ router.delete ("/congelados/:id",  cors(), controller.deleteCongelado);  // Dele
 router.put    ("/congelados/:id",  cors(), controller.updateCongelado);  // Update
 router.post   ("/congelados",      cors(), controller.createCongelado);  // Create
 
+// ~ VEHICULOS ~
+router.get    ("/vehiculos",      cors(), controller.readVehiculos);   // Read All
+router.get    ("/vehiculos/:id",  cors(), controller.readVehiculo);    // Read
+router.delete ("/vehiculos/:id",  cors(), controller.deleteVehiculo);  // Delete
+router.put    ("/vehiculos/:id",  cors(), controller.updateVehiculo);  // Update
+router.post   ("/vehiculos",      cors(), controller.createVehiculo);  // Create
+
 // EXPORT ROUTER
 module.exports = router;

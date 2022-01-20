@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Deg42/Fresquisimo-API-REST.git"
   },
-  "keywords": [],
+  "keywords": ["API","REST","WEBAPP"],
   "author": "deg42",
   "license": "ISC",
   "bugs": {
