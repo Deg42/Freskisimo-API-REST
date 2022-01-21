@@ -256,6 +256,133 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Repartidores",
+			"item": [
+				{
+					"name": "GetRepartidores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/repartidores/61eb06f7ff622d39346a4f49",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"repartidores",
+								"61eb06f7ff622d39346a4f49"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRepartidorById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/vehiculos/61e9b5800eb5bfbb5e143cde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"vehiculos",
+								"61e9b5800eb5bfbb5e143cde"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteRepartidorById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/vehiculos/61e9b4a2bf72ba9981fb57ed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"vehiculos",
+								"61e9b4a2bf72ba9981fb57ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutRepartidorById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehiculoId\": \"61eb097d658241f511f4a937\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/repartidores/61eb09df658241f511f4a93b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"repartidores",
+								"61eb09df658241f511f4a93b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostRepartidores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"matricula\": \"000-AAA\",\n    \"marca\": \"MAN\",\n    \"modelo\": \"TGE\",\n    \"fechaMatriculacion\": \"2010-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"vehiculos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

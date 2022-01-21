@@ -100,13 +100,13 @@ exports.readRepartidores = (req, res) =>
   Repartidor.find({}, (err, data) => {
     if (err) res.json({ error: err });
     else res.json(data);
-  }).populate('vehiculo');
+  }).populate("vehiculoId");
 
 exports.readRepartidor = (req, res) =>
   Repartidor.findOne({ _id: req.params.id }, (err, data) => {
     if (err) res.json({ error: err });
     else res.json(data);
-  }).populate('vehiculo');
+  }).populate("vehiculoId");
 
 exports.deleteRepartidor = (req, res) =>
   Repartidor.findOneAndRemove({ _id: req.params.id }, (err, data) => {
@@ -123,7 +123,7 @@ exports.updateRepartidor = (req, res) =>
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         repartiendo: req.body.repartiendo,
-        vehiculo: req.body.vehiculo,
+        vehiculoId: req.body.vehiculoId,
       },
     },
     (err, data) => {
@@ -138,9 +138,9 @@ exports.createRepartidor = (req, res) => {
     nombre: req.body.nombre,
     apellido: req.body.apellido,
     repartiendo: req.body.repartiendo,
-    vehiculo: req.body.vehiculo,
+    vehiculoId: req.body.vehiculoId,
   }).save((err, data) => {
     if (err) res.json({ error: err });
     else res.json(data);
-  })
+  });
 };

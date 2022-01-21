@@ -1,51 +1,58 @@
 // IMPORTS
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // SCHEMA MODELS
 
 // ~ CONGELADOS ~
 const Congelado = mongoose.model(
-  'Congelado',
+  "Congelado",
   new mongoose.Schema(
     { nombre: String, precio: Number, cantidad: Number },
     {
-      versionKey: false,  // Ignore version key
+      versionKey: false, // Ignore version key
     }
   )
-)
+);
 
 // ~ VEHICULOS ~
 const Vehiculo = mongoose.model(
-  'Vehiculo',
+  "Vehiculo",
   new mongoose.Schema(
-    { 
-    matricula: { type: String, unique: true }, 
-    marca: String, 
-    modelo: String, 
-    fechaMatriculacion: { type: Date, default: Date.now }},
     {
-      versionKey: false,  // Ignore version key
+      matricula: { type: String, unique: true },
+      marca: String,
+      modelo: String,
+      fechaMatriculacion: { type: Date, default: Date.now },
+    },
+    {
+      versionKey: false, // Ignore version key
     }
   )
-)
+);
 
 // ~ REPARTIDORES ~
 const Repartidor = mongoose.model(
-  'Repartidor',
+  "Repartidor",
   new mongoose.Schema(
-    { dni : { type: String, unique: true }, nombre: String, apellido: String, repartiendo: Boolean, vehiculo: { type: mongoose.Schema.Types.ObjectId, ref: 'Vehiculo' }},
     {
-      versionKey: false,  // Ignore version key
+      dni: { type: String, unique: true },
+      nombre: String,
+      apellido: String,
+      repartiendo: Boolean,
+      vehiculoId: { type: mongoose.Schema.Types.ObjectId, ref: "Vehiculo" },
+    },
+    {
+      versionKey: false, // Ignore version key
     }
   )
-)
+);
 
 // EXPORTS
 module.exports = {
   Congelado: Congelado,
   Vehiculo: Vehiculo,
-  Repartidor: Repartidor
-}
+  Repartidor: Repartidor,
+};
 
 // Shorter way to export:
 // module.exports = {
