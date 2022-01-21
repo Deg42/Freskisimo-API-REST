@@ -1,5 +1,5 @@
 // IMPORTS
-const { Congelado, Vehiculo } = require("./models.js");
+const { Congelado, Vehiculo, Repartidor } = require("./models.js");
 
 // CONTROLLER CRUD FUNCTIONS
 
@@ -94,3 +94,53 @@ exports.createVehiculo = (req, res) =>
     if (err) res.json({ error: err });
     else res.json(data);
   });
+
+// ~ REPARTIDORES ~
+exports.readRepartidores = (req, res) =>
+  Repartidor.find({}, (err, data) => {
+    if (err) res.json({ error: err });
+    else res.json(data);
+  }).populate('vehiculo');
+
+exports.readRepartidor = (req, res) =>
+  Repartidor.findOne({ _id: req.params.id }, (err, data) => {
+    if (err) res.json({ error: err });
+    else res.json(data);
+  }).populate('vehiculo');
+
+exports.deleteRepartidor = (req, res) =>
+  Repartidor.findOneAndRemove({ _id: req.params.id }, (err, data) => {
+    if (err) res.json({ error: err });
+    else res.json(data);
+  });
+
+exports.updateRepartidor = (req, res) =>
+  Repartidor.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      $set: {
+        dni: req.body.dni,
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        repartiendo: req.body.repartiendo,
+        vehiculo: req.body.vehiculo,
+      },
+    },
+    (err, data) => {
+      if (err) res.json({ error: err });
+      else res.json(data);
+    }
+  );
+
+exports.createRepartidor = (req, res) => {
+  new Repartidor({
+    dni: req.body.dni,
+    nombre: req.body.nombre,
+    apellido: req.body.apellido,
+    repartiendo: req.body.repartiendo,
+    vehiculo: req.body.vehiculo,
+  }).save((err, data) => {
+    if (err) res.json({ error: err });
+    else res.json(data);
+  })
+};

@@ -43,11 +43,13 @@ const Repartidor = mongoose.model(
 // EXPORTS
 module.exports = {
   Congelado: Congelado,
-  Vehiculo: Vehiculo
+  Vehiculo: Vehiculo,
+  Repartidor: Repartidor
 }
 
 // Shorter way to export:
 // module.exports = {
 //     Congelado
 //     Vehiculo
+//     Repartidor
 // }

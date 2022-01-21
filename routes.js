@@ -23,5 +23,12 @@ router.delete ("/vehiculos/:id",  cors(), controller.deleteVehiculo);  // Delete
 router.put    ("/vehiculos/:id",  cors(), controller.updateVehiculo);  // Update
 router.post   ("/vehiculos",      cors(), controller.createVehiculo);  // Create
 
+// ~ REPARTIDORES ~
+router.get    ("/repartidores",      cors(), controller.readRepartidores);   // Read All
+router.get    ("/repartidores/:id",  cors(), controller.readRepartidor);    // Read
+router.delete ("/repartidores/:id",  cors(), controller.deleteRepartidor);  // Delete
+router.put    ("/repartidores/:id",  cors(), controller.updateRepartidor);  // Update
+router.post   ("/repartidores",      cors(), controller.createRepartidor);  // Create
+
 // EXPORT ROUTER
 module.exports = router;
