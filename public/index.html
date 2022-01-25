@@ -1,34 +1,205 @@
-<h1>Hello Fresco!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Freskisimo API-REST Backend</title>
+  </head>
 
-<h3>Try the different routes to get JSON information using GET request:</h3>
-<small>You can use the URL</small>
-<ul>
-  <li>Read all "CONGELADOS": <a href="api/congelados">api/congelados</a></li>
-  <li>
-    Read a "CONGELADO" by id:
-    <a href="api/congelados/61e2b148d6634900f8877763">api/congelados/{id}</a>
-    (Langostino's Example)
-  </li>
-</ul>
-<ul>  
-  <li>Read all "VEHICULOS": <a href="api/vehiculos">api/vehiculos</a></li>
-  <li>
-    Read a "VEHICULO" by id:
-    <a href="api/vehiculos/61e9b5800eb5bfbb5e143cde">api/vehiculos/{id}</a>
-    (MAN TGE's Example)
-  </li>
-</ul>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/logo.png"
+              width="30"
+              height="30"
+              class="ms-3 d-inline-block align-top"
+              alt=""
+            />
+            Freskisimo API-REST
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-<h3>You can Create, Update and Delete a "CONGELADO" or "VEHICULO" with this routes using POST, PUT and DELETE requests: </h3>
-<small>You will need postman, curl or similar app</small>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/Deg42/Fresquisimo-API-REST"
+                >Repository</a
+              >
+            </li>
 
-<ul>
-    <li>Create a "CONGELADO": api/congelados (needs POSTS requets)</li>
-    <li>Update a "CONGELADO": api/congelados/{id} (needs PUT requets)</li>
-    <li>Delete a "CONGELADO": api/congelados/{id} (needs DELETE requets)</li>
-</ul>
-<ul>
-  <li>Create a "VEHICULO": api/vehiculos (needs POSTS requets)</li>
-  <li>Update a "VEHICULO": api/vehiculos/{id} (needs PUT requets)</li>
-  <li>Delete a "VEHICULO": api/vehiculos/{id} (needs DELETE requets)</li>
-</ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FrontEnd</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="container bg-body p-5">
+        <div class="row mx-3">
+          <div class="col">
+            <h1>Hello Fresco!</h1>
+          </div>
+          <div class="col">
+            <h3>
+              This web application is an API-REST made with Node, Express and
+              MongoDB (MongoAtlas) for educational purposes.
+            </h3>
+          </div>
+        </div>
+
+        <h5 class="mt-3">
+          Try the different routes to get JSON information using GET request:
+        </h5>
+        <p>You can use the URL</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <img
+                src="img/freezeFood.jpg"
+                class="card-img-top"
+                alt="freezed food"
+              />
+              <div class="card-body">
+                <h5 class="card-title">GET "CONGELADOS"</h5>
+                <p class="card-text">
+                  Read all "CONGELADOS":
+                  <a href="api/congelados">api/congelados</a>
+                </p>
+                <p class="card-text">
+                  Read a "CONGELADO" by id:
+                  <a href="api/congelados/61e2b148d6634900f8877763"
+                    >api/congelados/{id}</a
+                  >
+                  (Langostino's Example)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="img/van.jpg" class="card-img-top" alt="vans on road" />
+              <div class="card-body">
+                <h5 class="card-title">GET "VEHICULOS"</h5>
+                <p class="card-text">
+                  Read all "VEHICULOS":
+                  <a href="api/vehiculos">api/vehiculos</a>
+                </p>
+                <p class="card-text">
+                  Read a "VEHICULO" by id:
+                  <a href="api/vehiculos/61e9b5800eb5bfbb5e143cde"
+                    >api/vehiculos/{id}</a
+                  >
+                  (MAN TGE's Example)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="img/dealer.jpg"
+                class="card-img-top"
+                alt="freeze food dealer"
+              />
+              <div class="card-body">
+                <h5 class="card-title">GET "REPARTIDORES"</h5>
+                <p class="card-text">
+                  Read all "REPARTIDORES":
+                  <a href="api/repartidores">api/repartidores</a>
+                </p>
+                <p class="card-text">
+                  Read a "REPARTIDOR" by id:
+                  <a href="api/repartidores/61eb06f7ff622d39346a4f49"
+                    >api/repartidores/{id}</a
+                  >
+                  (Author Example)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="mt-5">
+          You can Create, Update and Delete a "CONGELADO", "VEHICULO" or
+          "REPARTIDOR" with this routes using POST, PUT and DELETE requests:
+        </h5>
+        <p>
+          You will need
+          <a href="https://www.postman.com/downloads/">postman</a>, curl or
+          similar app
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">POST PUT & DELETE "CONGELADOS"</h5>
+                <p class="card-text">
+                  Create a "CONGELADO": api/congelados (needs POSTS requets)
+                </p>
+                <p class="card-text">
+                  Update a "CONGELADO": api/congelados/{id} (needs PUT requets)
+                </p>
+                <p class="card-text">
+                  Delete a "CONGELADO": api/congelados/{id} (needs DELETE
+                  requets)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">POST PUT & DELETE "VEHICULOS"</h5>
+                <p class="card-text">
+                  Create a "VEHICULO": api/vehiculos (needs POSTS requets)
+                </p>
+                <p class="card-text">
+                  Update a "VEHICULO": api/vehiculos/{id} (needs PUT requets)
+                </p>
+                <p class="card-text">
+                  Delete a "VEHICULO": api/vehiculos/{id} (needs DELETE requets)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">POST PUT & DELETE "REPARTIDOR"</h5>
+                <p class="card-text">
+                  Create a "REPARTIDOR": api/repartidores (needs POSTS requets)
+                </p>
+                <p class="card-text">
+                  Update a "REPARTIDOR": api/repartidores/{id} (needs PUT
+                  requets)
+                </p>
+                <p class="card-text">
+                  Delete a "REPARTIDOR": api/repartidores/{id} (needs DELETE
+                  requets)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
