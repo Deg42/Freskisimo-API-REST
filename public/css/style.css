@@ -1,24 +1,66 @@
-body{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-image: url('../img/bg.jpeg');
-    background-repeat: repeat;   
+body {
+  background-image: url("../img/bg.jpeg");
+  background-repeat: repeat;
+}
+code {
+  color: #0b51ba;
 }
 
-.bg-lightBlue{
-    background-color: rgb(149, 225, 250);
+.bg-lightBlue {
+  background-color: #95E1FA;
 }
+
+.bg-gray {
+  background-color:#e0e0e0;
+}
+
 
 .badge {
-    line-height: inherit;
+  line-height: inherit;
 }
 
-code{
-    color: #0B51BA;
+.badge-blue {
+  background-color: #2563c0;
 }
-.item-header{
-    box-sizing: border-box;
-    width: 100% !important;
-    opacity: 1;
-    background-image: url('../img/freezeFood.jpg');
+
+.badge-green {
+  background-color: #10a35e;
+}
+
+.badge-yellow {
+  background-color: #d1ac33;
+}
+
+.badge-red {
+  background-color: #df3647;
+}
+
+.hero-image{
+  border-radius: 3px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  padding-top: 7%;
+  padding-bottom: 2%;
+  text-align: center;
+  color: white;
+}
+
+.hero-image-congelados {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/freezeFood.jpg");
+}
+
+.hero-image-vehiculos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/vehicles.jpg");
+}
+
+.hero-image-repartidores {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/courier.png");
 }

@@ -13,25 +13,34 @@
 
 <body>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" width="30" height="30" class="ms-3 d-inline-block align-top" alt="" />
-          Freskisimo API-REST
+          <img src="img/logo.png" width="25" height="25" class="ms-3 d-inline-block align-top" alt="" />
+          Freskisimo API REST
         </a>
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/Deg42/Fresquisimo-API-REST">Repository</a>
-          </li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#">FrontEnd</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Deg42/Fresquisimo-API-REST">Repository</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">FrontEnd</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </nav>
   </header>
@@ -39,101 +48,377 @@
   <main role="main">
     <div class="container bg-body p-5">
       <div class="row mx-3">
-        <div class="col">
-          <h1>Hello Fresco!</h1>
+        <div class="col-12 col-md-6">
+          <h1 class="display-1">Hello Fresco!</h1>
         </div>
-        <div class="col">
-          <!-- ADD EXTERNAL LINKS-->
+        <div class="col-md-12 order-md-3">
+          <h3 class="my-3">
+            This web application is an API-REST made with Node, Express and
+            MongoDB (MongoAtlas) for educational purposes.
+          </h3>
+        </div>
+        <div class="col-12 col-md-6 order-md-2">
+          <div class="row my-2 py-2 text-center bg-gray rounded-3">
+            <div class="col">
+              <a href="https://nodejs.org/en/">
+              <svg class="img-fluid" width="100" height="100" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 66" fill="#fff" fill-rule="evenodd"
+                stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                <use xlink:href="#A" x="1" y="1" />
+                <symbol id="A" overflow="visible">
+                  <path
+                    d="M26.32.681c1.6-.906 3.64-.91 5.2 0l23.888 13.466c1.494.84 2.494 2.506 2.48 4.228v27c.01 1.794-1.088 3.496-2.664 4.32l-23.76 13.404a5.2 5.2 0 0 1-5.278-.146l-7.13-4.12c-.486-.29-1.032-.52-1.376-.99.304-.408.844-.46 1.284-.64.992-.316 1.9-.8 2.812-1.312.23-.16.512-.1.732.044l6.08 3.516c.434.25.874-.08 1.246-.29l23.33-13.166c.288-.14.448-.444.424-.76v-26.74c.032-.36-.174-.688-.5-.834L29.408 4.315a.82.82 0 0 0-.93-.002L4.792 17.687c-.32.146-.54.47-.5.83v26.74a.75.75 0 0 0 .43.75l6.324 3.57c1.188.64 2.646 1 3.954.53a3 3 0 0 0 1.942-2.818l.006-26.6c-.028-.394.344-.72.726-.68h3.04c.4-.01.714.414.66.81l-.006 26.768c.002 2.376-.974 4.96-3.172 6.126-2.708 1.4-6.056 1.106-8.732-.24l-6.8-3.76A4.9 4.9 0 0 1 0 45.393v-27a4.92 4.92 0 0 1 2.564-4.282L26.32.681zm6.888 18.716c3.454-.2 7.152-.132 10.26 1.57 2.406 1.304 3.74 4.04 3.784 6.716-.068.36-.444.56-.788.534-1-.002-2.004.014-3.008-.006-.426.016-.672-.376-.726-.752-.288-1.28-.986-2.546-2.19-3.164-1.848-.926-3.992-.88-6.008-.86-1.472.08-3.054.206-4.3 1.07-.96.656-1.248 2-.906 3.044.32.766 1.206 1.012 1.928 1.24 4.164 1.088 8.574 1 12.66 2.414 1.69.584 3.344 1.72 3.924 3.49.756 2.372.426 5.208-1.26 7.112-1.368 1.568-3.36 2.4-5.35 2.884-2.646.59-5.39.604-8.076.34-2.526-.288-5.154-.952-7.104-2.672-1.668-1.448-2.48-3.704-2.4-5.88.02-.368.386-.624.74-.594h3c.404-.028.7.32.72.7.186 1.2.644 2.5 1.708 3.2 2.052 1.324 4.626 1.232 6.974 1.27 1.946-.086 4.13-.112 5.72-1.4.84-.734 1.086-1.96.86-3.016-.246-.892-1.2-1.306-2-1.6-4.11-1.3-8.57-.828-12.64-2.3-1.652-.584-3.25-1.688-3.884-3.386-.886-2.4-.48-5.374 1.386-7.214 1.8-1.83 4.44-2.536 6.94-2.788z"
+                    stroke="none" fill="#8cc84b" fill-rule="nonzero" />
+                </symbol>
+              </svg>
+            </a>
+            </div>
+            <div class="col">
+              <a href="https://expressjs.com/">
+              <svg class="img-fluid" width="100" height="100" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 67 40" fill="#fff" fill-rule="evenodd"
+                stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                <use xlink:href="#B" x="1" y="1" />
+                <symbol id="B" overflow="visible">
+                  <path
+                    d="M64 36.167c-2.328.592-3.768.026-5.06-1.914l-9.188-12.712-1.328-1.76-10.73 14.514c-1.226 1.746-2.512 2.506-4.8 1.888l13.74-18.444-12.792-16.66c2.2-.428 3.72-.21 5.07 1.76l9.53 12.87 9.6-12.8c1.23-1.746 2.552-2.41 4.76-1.766l-4.96 6.576-6.72 8.75c-.8 1-.69 1.684.046 2.65L64 36.167zM.016 17.431l1.124-5.528C4.2.963 16.74-3.583 25.388 3.177c5.054 3.976 6.31 9.6 6.06 15.9H2.96c-.428 11.34 7.734 18.184 18.14 14.692 3.65-1.226 5.8-4.084 6.876-7.66.546-1.792 1.45-2.072 3.134-1.56-.86 4.472-2.8 8.208-6.9 10.546-6.126 3.5-14.87 2.368-19.47-2.496C2 29.777.868 26.201.36 22.377c-.08-.632-.24-1.234-.36-1.84q.016-1.552.016-3.104zm2.996-.76h25.744c-.168-8.2-5.274-14.024-12.252-14.074-7.66-.06-13.16 5.626-13.492 14.074z"
+                    stroke="none" fill="#000" fill-rule="nonzero" />
+                </symbol>
+              </svg>
+            </a>
+            </div>
+            <div class="col">
+              <a href="https://www.mongodb.com/">
+              <svg class="img-fluid" width="100" height="100" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37 81" fill="#fff" fill-rule="evenodd"
+                stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                <use xlink:href="#C" x=".5" y=".5" />
+                <symbol id="C" overflow="visible">
+                  <g stroke="none" fill-rule="nonzero">
+                    <path
+                      d="M17.716.218l2.135 4.01a11.98 11.98 0 0 0 1.612 2.005c1.787 1.787 3.485 3.66 5.01 5.665 3.617 4.75 6.057 9.999 7.799 15.729 1.045 3.485 1.613 7.059 1.655 10.674.175 10.807-3.53 20.086-10.999 27.798a31.74 31.74 0 0 1-3.925 3.355c-.74 0-1.09-.567-1.395-1.09-.568-.957-.915-2.05-1.09-3.137-.262-1.307-.435-2.615-.35-3.965v-.61c-.06-.155-.712-60.15-.453-60.433z"
+                      fill="#599636" />
+                    <path
+                      d="M17.716.086c-.087-.175-.175-.042-.262.042.042.875-.262 1.655-.74 2.4-.5.74-1.22 1.307-1.917 1.917C10.922 7.8 7.872 11.853 5.43 16.385 2.18 22.484.505 29.021.03 35.903c-.217 2.482.785 11.242 1.567 13.769 2.135 6.709 5.97 12.332 10.937 17.211 1.22 1.175 2.5 2.265 3.875 3.312.392 0 .435-.35.5-.61a11.96 11.96 0 0 0 .392-1.7l.875-6.535-.46-61.265z"
+                      fill="#6cac48" />
+                    <path
+                      d="M19.851 72.108c.087-1 .567-1.83 1.09-2.657-.5-.217-.915-.65-1.22-1.132-.262-.435-.48-.957-.65-1.437-.61-1.83-.74-3.75-.915-5.62v-1.132c-.217.175-.262 1.655-.262 1.875-.127 1.976-.389 3.942-.785 5.882-.13.785-.217 1.567-.7 2.265 0 .087 0 .175.042.305.785 2.31 1 4.662 1.132 7.059v.875c0 1.045-.042.825.825 1.175.35.13.74.175 1.09.435.262 0 .305-.217.305-.392l-.13-1.437v-4.01c-.042-.7.087-1.395.175-2.05z"
+                      fill="#c2bfbf" />
+                  </g>
+                </symbol>
+              </svg>
+            </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <h3 class="my-3">
-        This web application is an API-REST made with Node, Express and
-        MongoDB (MongoAtlas) for educational purposes.
-      </h3>
+
 
       <div class="p-3 mb-4 bg-lightBlue rounded-3">
-        <!--        
-          <div class="h-100 item-header">
-          <h2>CONGELADOS</h2>
-        </div>
-      -->
-        <div class="row m-1 bg-light align-items-center rounded">
-          <div class="col">
-            <h2 class="m-2">
-              <span class="badge bg-primary">GET</span>
-            </h2>
-          </div>
-          <div class="col">
-            <code>api/congelados</code>
-          </div>
-          <div class="col">
-            Get all the "CONGELADOS"
+
+        <div class="hero-image hero-image-congelados">
+          <div class="hero-text">
+            <h2 class="fw-bold">CONGELADOS</h2>
+            <p class="fst-italic">Food preserved by a freezing process</p>
           </div>
         </div>
 
-        <div class="row m-1 bg-light align-items-center rounded">
-          <div class="col">
-            <h2 class="m-2">
-              <span class="badge bg-primary">GET</span>
-            </h2>
-          </div>
-          <div class="col">
-            <code>api/congelados/{id}</code>
-          </div>
-          <div class="col">
-            Get a "CONGELADO" by id
-          </div>
-        </div>
 
-        <div class="row m-1 bg-light align-items-center rounded">
-          <div class="col">
-            <h2 class="m-2">
-              <span class="badge bg-primary">POST</span>
-            </h2>
-          </div>
-          <div class="col">
-            <code>api/congelados</code>
-          </div>
-          <div class="col">
-            Add a "CONGELADO"
-          </div>
-        </div>
+        <div class="text-center">
 
-        <div class="row m-1 bg-light align-items-center rounded">
-          <div class="col">
-            <h2 class="m-2">
-              <span class="badge bg-primary">PUT</span>
-            </h2>
+          <div class="row m-1 py-2 bg-light rounded">
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">
+                Request Method
+              </h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">URL</h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">Description</h4>
+            </div>
           </div>
-          <div class="col">
-            <code>api/congelados/{id}</code>
-          </div>
-          <div class="col">
-            Modify a "CONGELADO" by id
-          </div>
-        </div>
 
-        <div class="row m-1 bg-light align-items-center rounded">
-          <div class="col">
-            <h2 class="m-2">
-              <span class="badge bg-primary">DELETE</span>
-            </h2>
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/congelados</code>
+            </div>
+            <div class="col fst-italic">
+              Get all the "CONGELADOS"
+            </div>
           </div>
-          <div class="col">
-            <code>api/congelados/{id}</code>
-          </div>
-          <div class="col">
-            Delete a "CONGELADO" by id
-          </div>
-        </div>
 
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/congelados/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Get a "CONGELADO" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-green">POST</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/congelados</code>
+            </div>
+            <div class="col fst-italic">
+              Add a "CONGELADO"
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-yellow">PUT</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/congelados/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Modify a "CONGELADO" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-red">DELETE</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/congelados/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Delete a "CONGELADO" by id
+            </div>
+          </div>
+
+        </div>
       </div>
 
+      <div class="p-3 mb-4 bg-lightBlue rounded-3">
 
+        <div class="hero-image hero-image-vehiculos">
+          <div class="hero-text">
+            <h2 class="fw-bold">VEHÍCULOS</h2>
+            <p class="fst-italic">Machine with wheels and an engine, used for transporting, especially on land</p>
+          </div>
+        </div>
+
+
+        <div class="text-center">
+
+          <div class="row m-1 py-2 bg-light rounded ">
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">
+                Request Method
+              </h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">URL</h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">Description</h4>
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/vehiculos</code>
+            </div>
+            <div class="col fst-italic">
+              Get all the "VEHICULOS"
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/vehiculos/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Get a "VEHICULO" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-green">POST</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/vehiculos</code>
+            </div>
+            <div class="col fst-italic">
+              Add a "VEHICULO"
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-yellow">PUT</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/vehiculos/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Modify a "VEHICULO" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-red">DELETE</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/vehiculos/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Delete a "VEHICULO" by id
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="p-3 mb-4 bg-lightBlue rounded-3">
+
+        <div class="hero-image hero-image-repartidores">
+          <div class="hero-text">
+            <h2 class="fw-bold">REPARTIDORES</h2>
+            <p class="fst-italic">A person employed to make deliveries of merchandise to purchasers</p>
+          </div>
+        </div>
+
+
+        <div class="text-center">
+
+          <div class="row m-1 py-2 bg-light rounded ">
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">
+                Request Method
+              </h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">URL</h4>
+            </div>
+            <div class="col d-none d-md-block">
+              <h4 class="m-0">Description</h4>
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/repartidores</code>
+            </div>
+            <div class="col fst-italic">
+              Get all the "REPARTIDORES"
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-blue">GET</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/repartidores/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Get a "REPARTIDOR" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-green">POST</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/repartidores</code>
+            </div>
+            <div class="col fst-italic">
+              Add a "REPARTIDOR"
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-yellow">PUT</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/repartidores/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Modify a "REPARTIDOR" by id
+            </div>
+          </div>
+
+          <div class="row m-1 bg-light align-items-center rounded">
+            <div class="col">
+              <h2 class="m-2">
+                <span class="badge badge-red">DELETE</span>
+              </h2>
+            </div>
+            <div class="col">
+              <code>api/repartidores/{id}</code>
+            </div>
+            <div class="col fst-italic">
+              Delete a "REPARTIDOR" by id
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-
   </main>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
