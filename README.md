@@ -1,5 +1,8 @@
 # Fresquisimo-API-REST
 *Node.js API-REST project with CRUD operations*
+
+[Link to app deployed on Heroku](https://freskisimo-app.herokuapp.com/)
+
 ## Requirements
 - The application will be applied entirely in Javascript, both in the backend and in the frontend, being able to also use HTML, CSS and related frameworks that are considered appropriate.
 - The application will allow the 4 CRUD operations on the database.
