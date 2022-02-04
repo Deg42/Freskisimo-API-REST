@@ -1,4 +1,4 @@
-# Fresquisimo-API-REST
+# Freskisimo-API-REST
 *Node.js API-REST project with CRUD operations*
 
 [Link to app deployed on Heroku](https://freskisimo-app.herokuapp.com/)
