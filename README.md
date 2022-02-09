@@ -35,6 +35,12 @@ The tests are in [Freskisimo.postman_collection file](https://github.com/Deg42/F
 
 Simply export the json to the [POSTMAN app](https://www.postman.com/downloads/)
 
+## TODO
+- [ ] Footer
+- [ ] Add winks :wink:
+- [ ] Transalate to spanish :es:
+- [ ] Add more documents to collections
+
 ## Acknowledgment
 Full Stack Teacher: 
 [José Antonio Muñoz Jiménez](https://github.com/jamj2000) 
