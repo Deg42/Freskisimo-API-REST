@@ -40,6 +40,7 @@ Simply export the json to the [POSTMAN app](https://www.postman.com/downloads/)
 - [ ] Add winks :wink:
 - [ ] Transalate to spanish :es:
 - [ ] Add more documents to collections
+- [ ] Update links and put "/"
 
 ## Acknowledgment
 Full Stack Teacher: 
