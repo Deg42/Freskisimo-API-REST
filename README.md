@@ -1,7 +1,7 @@
 # Freskisimo-API-REST
 *Node.js API-REST project with CRUD operations*
 
-[Link to app deployed on Heroku](https://freskisimo-app.herokuapp.com/)
+[Link to app deployed on Render](https://freskisimo-api-rest.onrender.com/)
 
 ## Requirements
 - The application will be applied entirely in Javascript, both in the backend and in the frontend, being able to also use HTML, CSS and related frameworks that are considered appropriate.
@@ -18,7 +18,7 @@
 - Perform the necessary tests (with postman, curl or similar) to verify the correct performance of the API.
 - Configure the necessary environment variables.
 - Upload the repository to GitHub
-- Deploy the application on Heroku
+- ~~Deploy the application on Heroku~~
 
 ## How to
 You will need a .env file with the following Environment Variables:
